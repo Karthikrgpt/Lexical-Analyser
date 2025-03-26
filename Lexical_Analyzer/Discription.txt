@@ -1,0 +1,68 @@
+------------------------------------------------------------------------------------------------------------
+                                                LEXICAL ANALYZER
+------------------------------------------------------------------------------------------------------------
+Created by "Karthik R."
+Last updated on 18th February 2025
+------------------------------------------------------------------------------------------------------------
+
+Description :-
+
+    Lexical analysis, also known as scanning is the first phase of a compiler which involves reading the 
+source program character by character from left to right and organizing them into tokens. Tokens are 
+meaningful sequences of characters. There are usually only a small number of tokens for a programming 
+language including constants (such as integers, doubles, characters, and strings), operators (arithmetic, 
+relational, and logical), punctuation marks and reserved keywords.
+ 
+Here’s a breakdown to its Tokens :-
+    1. Pre-Proccesser: Processes directives like #include and #define before compilation.
+    2. Header Files: Contain function declarations and macros, included using #include.
+    3. keywords: Reserved words with special meaning, e.g., int, return.
+    4. operators: Symbols that perform operations on variables, e.g., +, -, *, /.
+    5. Special characters: Characters with specific meaning, e.g., ;, ,, #.
+    6. Brackets: Used to define scope and structure, e.g., {}, (), [].
+    7. Constents: Fixed values that do not change, e.g., 10, 0.
+    8. Macros: Predefined or user-defined code replaced by a name, using #define.
+    9. Identifiers: Names used for variables, functions, and arrays.
+    10. Strings: Sequence of characters enclosed in double quotes, e.g., "Hello".
+
+------------------------------------------------------------------------------------------------------------
+Command line for gcc compiler:
+
+    -> need to pass the sample c file to check for the lexical analysis
+
+        gcc check_token.c lexer.c main.c supportive_file.c -o lexer && ./lexer <sample_file_name.c>
+
+    -> the sample file is also attached to this file.
+    -> It doesn't check for the errors.
+
+------------------------------------------------------------------------------------------------------------
+Output:
+
+    -> after passing the sample.c, which is attached with this file.
+
+        Sl.No.     Token-Types              Tokens
+          1    Pre-Proccesser      #ifndef, #define, #include, #endif
+          2    Header file         <stdio.h>, "lexer.h"
+          3    Keywords            int, float, char, return
+          4    Operators           =, *, +, /, <<, >>=, ++, ~
+          5    Special Character   ,, ;
+          6    Brackets            (, ), {, [, ], }
+          7    Constents           15, 1, 2, 10, 0, 10.15, 012345678, 3, 4, 12, 16
+          8    Macros              SAMPLE, CONST
+          9    Identifiers         fun_mul, num1, num2, main, z, x, _y, a_10, str, sum, y
+         10    Strings             "Hello; world", "Sum of x and"" y is %f\n"
+
+------------------------------------------------------------------------------------------------------------
+Files enclosed :-
+
+1. check_token.c
+2. lexer.c
+3. main.c
+4. supportive_file.c
+5. sample.c
+6. lexer.h
+6. Discription.txt
+
+------------------------------------------------------------------------------------------------------------
+                                                THE END
+------------------------------------------------------------------------------------------------------------
